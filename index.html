@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <form>
+        <form id="shopping_list_form">
             <div>
                 <label for="food_item">Food item</label>
                 <input type="text" id="food_item" required/>
@@ -32,11 +32,17 @@
                     <option value="Tesco">Tesco</option>
                 </select>
             </div>
-
-
-
+            <div class="button">
+                <input type="submit" value="save"/>
+            </div>
+            
         </form>
+        
+        <button id="delete-all">Delete All</button>
+
         <hr>
+        <h1>Your Shopping List </h1>
+        <ul id="shopping-list"></ul>
     </div>
     
 </body>
