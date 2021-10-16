@@ -1,0 +1,60 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: #eae8e8;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.container{
+    background-color: #5b5b5b;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.input-form-container{
+    display: flex;
+}
+.input-item {
+    padding-right:20px;
+}
+
+.button{
+    margin-top: 10px;
+    padding: 4px 20px;
+}
+
+#list-container{
+    width:70%;
+    margin:auto;
+    text-align: center;
+}
+
+#list-container > h1{
+    padding:10px;
+}
+
+#shopping-list{
+    display: block;
+    list-style-type: none;
+    padding:20px;
+
+}
+
+#shopping-list > li{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+}
+
+
+
+#shopping-list > li > h3, h2{
+    margin: 6px 20px;
+
+}
+

@@ -5,42 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" type = "text/css" media="screen" href="css/main.css"/>
     <script src="js/app.js"></script>
 </head>
 <body>
     <div class="container">
         <form id="shopping_list_form">
-            <div>
-                <label for="food_item">Food item</label>
-                <input type="text" id="food_item" required/>
-            </div>
+            <div class="input-form-container">
+                <div class="input-item">
+                    <label for="food_item">Food item</label>
+                    <input type="text" id="food_item" required/>
+                </div>
 
-            <div>
-                <label for="quantity">Quantity</label>
-                <input type="text" id="quantity">
-            </div>
+                <div class="input-item">
+                    <label for="quantity">Quantity</label>
+                    <input type="text" id="quantity" size="4">
+                </div>
 
-            <div>
-                <label for="shop">Pick Shop</label>
-                <select id="shop">
-                    <option value="" disabled selected></option>
-                    <option value="Aldi">Aldi</option>
-                    <option value="Lidl">Lidl</option>
-                    <option value="Morrisons">Morrisons</option>
-                    <option value="Sainsburys">Sainsburys</option>
-                    <option value="Tesco">Tesco</option>
-                </select>
-            </div>
-            <div class="button">
-                <input type="submit" value="save"/>
-            </div>
+                <div class="input-item">
+                    <label for="shop">Pick Shop</label>
+                    <select id="shop">
+                        <option value="" disabled selected></option>
+                        <option value="Aldi">Aldi</option>
+                        <option value="Lidl">Lidl</option>
+                        <option value="Morrisons">Morrisons</option>
+                        <option value="Sainsburys">Sainsburys</option>
+                        <option value="Tesco">Tesco</option>
+                    </select>
+                </div>
+            </div>    
+    
+                <div >
+                    <input type="submit" value="save" class="button"/>
+                </div>
             
         </form>
-        
-        <button id="delete-all">Delete All</button>
 
-        <hr>
+        <button id="delete-all" class="button">Delete All</button>
+    
+       
+    </div> 
+    <hr>
+    <div id="list-container">
         <h1>Your Shopping List </h1>
         <ul id="shopping-list"></ul>
     </div>

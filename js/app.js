@@ -4,12 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const handleNewItemFormSubmit= function (event) {
         event.preventDefault();
 
-        console.log(event);
-
+        //set the value entered inton the form to a variable
         const food_item = event.target.food_item.value;
         const quantity = event.target.quantity.value;
         const shop = event.target.shop.value;
-        console.log(food_item, quantity, shop );
 
         const newListItem = document.createElement('li');
         
@@ -23,30 +21,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const foodElement = document.createElement('h3');
         foodElement.textContent = food_item;
-        newListItem.appendChild(foodElement);
-
-        
-
-        
+        newListItem.appendChild(foodElement);   
 
         const shoppingList = document.querySelector('#shopping-list');
         shoppingList.appendChild(newListItem)
 
-        event.target.reset();
-
+        // event.target.reset();
     }
+
     const handleDeleteAllClick = function (event) {
         const readingList = document.querySelector('#shopping-list');
         readingList.innerHTML = '';
       }
-
-    
 
     const newItemForm = document.querySelector('#shopping_list_form');
     newItemForm.addEventListener('submit', handleNewItemFormSubmit);
     
     const deleteAllButton = document.querySelector('#delete-all');
     deleteAllButton.addEventListener('click', handleDeleteAllClick);
- 
 
 })
