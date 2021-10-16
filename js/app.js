@@ -12,18 +12,22 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(food_item, quantity, shop );
 
         const newListItem = document.createElement('li');
+        
+        const shopElement = document.createElement('h2');
+        shopElement.textContent = shop;
+        newListItem.appendChild(shopElement);
+        
+        const quantityElement = document.createElement('h3');
+        quantityElement.textContent = quantity;
+        newListItem.appendChild(quantityElement);
 
         const foodElement = document.createElement('h3');
         foodElement.textContent = food_item;
         newListItem.appendChild(foodElement);
 
-        const quantityElement = document.createElement('h3');
-        quantityElement.textContent = quantity;
-        newListItem.appendChild(quantityElement);
+        
 
-        const shopElement = document.createElement('h2');
-        shopElement.textContent = shop;
-        newListItem.appendChild(shopElement);
+        
 
         const shoppingList = document.querySelector('#shopping-list');
         shoppingList.appendChild(newListItem)
@@ -31,9 +35,18 @@ document.addEventListener('DOMContentLoaded', () => {
         event.target.reset();
 
     }
+    const handleDeleteAllClick = function (event) {
+        const readingList = document.querySelector('#shopping-list');
+        readingList.innerHTML = '';
+      }
+
+    
 
     const newItemForm = document.querySelector('#shopping_list_form');
     newItemForm.addEventListener('submit', handleNewItemFormSubmit);
-
+    
+    const deleteAllButton = document.querySelector('#delete-all');
+    deleteAllButton.addEventListener('click', handleDeleteAllClick);
+ 
 
 })
